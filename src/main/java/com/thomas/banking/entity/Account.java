@@ -11,7 +11,7 @@ import com.thomas.banking.util.AccountLevel;
 @Entity
 public class Account {
 
-	private int accountNumber;
+	private Long accountNumber;
 	private String accountType;
 	private AccountLevel level;
 
@@ -20,11 +20,11 @@ public class Account {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	public int getAccountNumber() {
+	public Long getAccountNumber() {
 		return accountNumber;
 	}
 
-	public void setAccountNumber(int accountNumber) {
+	public void setAccountNumber(Long accountNumber) {
 		this.accountNumber = accountNumber;
 	}
 
