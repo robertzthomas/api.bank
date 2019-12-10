@@ -16,8 +16,7 @@ public class AccountService {
 	@Autowired
 	private AccountRepository repo;
 
-	@SuppressWarnings("unused")
-	private Account GetAccount(Long accountNumber) throws Exception {
+	public Account getAccount(Long accountNumber) throws Exception {
 		try {
 			return repo.findOne(accountNumber);
 		} catch (Exception e) {

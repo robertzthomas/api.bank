@@ -14,6 +14,7 @@ public class Account {
 	private Long accountNumber;
 	private String accountType;
 	private AccountLevel level;
+	private Double accountBalance;
 
 	@JsonIgnore
 	private User user;
@@ -42,6 +43,14 @@ public class Account {
 
 	public void setLevel(AccountLevel level) {
 		this.level = level;
+	}
+
+	public Double getAccountBalance() {
+		return accountBalance;
+	}
+
+	public void setAccountBalance(Double accountBalance) {
+		this.accountBalance = accountBalance;
 	}
 
 }
