@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import javax.persistence.ManyToOne;
 
 import com.thomas.banking.util.AccountLevel;
 
@@ -17,7 +18,8 @@ public class Account {
 	private Double accountBalance;
 
 	@JsonIgnore
-	private User user;
+	@ManyToOne
+	public User user;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

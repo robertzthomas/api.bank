@@ -15,7 +15,7 @@ import com.thomas.banking.entity.Account;
 import com.thomas.banking.service.AccountService;
 
 @RestController
-@RequestMapping("/Accounts")
+@RequestMapping("/accounts")
 public class AccountController {
 
 	@Autowired

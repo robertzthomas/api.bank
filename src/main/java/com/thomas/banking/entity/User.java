@@ -1,9 +1,13 @@
 package com.thomas.banking.entity;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 import com.thomas.banking.util.AccountLevel;
 
@@ -14,6 +18,8 @@ public class User {
 	private String firstName;
 	private String lastName;
 	private AccountLevel level;
+	@OneToMany(mappedBy = "user")
+	private HashSet<Account> accounts;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -47,6 +53,14 @@ public class User {
 
 	public void setLevel(AccountLevel level) {
 		this.level = level;
+	}
+
+	public HashSet<Account> getAccounts() {
+		return accounts;
+	}
+
+	public void setAccounts(HashSet<Account> accounts) {
+		this.accounts = accounts;
 	}
 
 }
